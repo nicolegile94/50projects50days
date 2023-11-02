@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --left-bg-color: rgba(87, 84, 236, 0.7);
+  --right-bg-color: rgba(43, 43, 43, 0.8);
+  --left-btn-hover-color:  rgba(87, 84, 236, 1);
+  --right-btn-hover-color:  rgba(28, 122, 28, 1);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left:50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-size: 1 rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 15 rem;
+  padding: 1.5rem;
+}
+
+.split.left .btn:hover {
+  background-color: var(--left-btn-hover-color);
+  border-color: var(--left-btn-hover-color);
+
+}
+
+.split.right .btn:hover {
+  background-color: var(--right-btn-hover-color);
+  border-color: var(--right-btn-hover-color);
+
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #333;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+  background: url('https://lh3.googleusercontent.com/pw/ADCreHer3TWvT1yr5asyc7ObpZTH5lUdUowliHiN42eGqT83Dc3hsYQ1SNLXmdxVUhYLWy0FCMTN9xGkQwygMRyMj8qcSc0iwyEWVJU8QLQa1R1f7qXhSGmMc_pP8cu2Ov3tNi1rxuASn63NvVcWeZrn1B1IqP2z-jyVCgp0_DFZUbpeHeMYCh_AMiBUsvWZfk236f7iUHWpiW1A_HTmIWKPOECfWLSTPH4Qk6LiIBB30gUeBMbuoSdmg8lVUEwhC4Djn8dmtn-JVhCgbnXWJrV-kgaDjrMwDu-DT0SihwHk6_YZCZAQiRSWVYxAsGO6nofyu3_ir1hGDNb2s20cuecntZT93NMsGgs2cyMPKHqRoFY54yrRy19disalG7hswAlsdt1XWnDbFqSUzH6qLkpnNuUk3ViuBKKWDI0Wl5KqJTbTGODFnHVVQgNNgm6Y1pKLIZbcqGfPDbsrIIJOUsd5bF4Gs9-pldEC-QzFEbhZtRybkFtlGwSEw9kPBzIjkPYybKTKYakq2iZEtRUQe4H5yDfCdb6pwOv2G-rIRJxTiBg5608TR-f4fmaZSBeoCdGkj_y6bQgSIHoJwV-xpHvWDNloQmMvAfCa_iZ4RkcruGbsJLHxCtYtpicdmzKkaXFVIbSjS9z_7ZBr35JJF7ZGwStH3VTAonlP3TxKM6cxasLPA16WeeT5Cfk240qgZUvhR5g-py37BxEIBDq29VpupHCQ8xQzFmZCCIK8DY8J-AHPlZuiunMhTeX5Lu2axW_Xzp8WlS7yGwDP0U0Oa5Dvm-OorMR9zObo4Fa-tfX4rJdelcAQ403OSTifkUvl9U89fhWRHlYF4ykse2_OfCSNaeKJ5t9_oMJ2CMFCR_0QAXFBhnY0EWfeOOcKFHt1lu-6FrELLWoe7qeBGbK0ZQN-vG0=w1174-h1566-s-no-gm?authuser=0');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split.right {
+  right: 0;
+  background: url('https://lh3.googleusercontent.com/pw/ADCreHf34Te2VEvKVRwZvNIKT_WtBvtWRF551OKbNLVXOs0y3IAJNw-aFoSk1HtyS1ogcvj5tk-4fwpftYFZRqJXM7qoWl20-SbcIQgT2CEWT1TM-3XmyKvIp0mpUXFUL8F2Y4ZWAV4QOx_s6FEg_2RA1p2IfjyhFZu-dwwD-C8m9rT_xC4Y2KGo8iyQk54dEailEzpIms65DpEkO63Y4MbbT5c_4ZUEXEbRWqyYPDKzbCWva9fyexdwIqBOffG4TJUUhyHau8eVlCH0CMikODgIqqs5K7d4a2O9KMuX_Q9LrsQII9Wf7fSa4b1xynkTIuatMOM6xXAUaWnR80BI5Vw4ZUDTolkib8h8xaySTRxePJ2ekt4KHTqepO_27HbJwGGDzVKuj5XoOSctTFufEM_n8Ch-8DI-ZzUhgmg0Qif7WhgHZzWkUvC3RxqCCvlaa0iiQ7geFp9xeS-T4hxUTzCyd7LODVR9H5uonIgQDBHXPwif4mHMjZFaQxBqC97iXjlx4DZwVF29dbbVDgMDGgL56qpervwlWzZa5swAZR83-Fqv3IiaYvTX6eM0O2nG5H8N5kRLp7D0YfPEGiKcM6muHNa_ZfYm64hNviEPSKX15ItC_RXy-QFxsrCCFcIy8DaYFmffNATn6wy06EmPRnXwjqv17IcLJjuLmB7ldqCoXJJsMmqsRYcxijZRUv364o5tQd4zsHw6ogr8iyr0Dq0UMfmekt64XjAYYeibSzWivqtJwmg7iLprOMpVjERTIKFwWVMmlXT8FMqCq5Saek0Hgr2G7iYhl7HvZy4Xn52h6WOw5vSAf1HWM54UyDnZwCFFcs9FofXNfGXbPkqpIsVA7CdQC_hSf3wYK12d0YJFjf81PQQ9IGkcdXZNKGIfNrBv0K1IaG_7doNCLLpg6iBF8PI=w1174-h1566-s-no-gm?authuser=0');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split.left::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-bg-color);
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+  transition: all var(--speed) ease-in-out;
+}
+
+.split.right::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--right-bg-color);
+}
+
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+.hover-right .left {
+  width: var(--other-width);
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+    top: 30%;
+  }
+
+  .btn {
+    padding: 1.2rem;
+    width: 12rem;
+  }
+}
